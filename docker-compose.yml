@@ -2,7 +2,9 @@ version: '3'
 services:
   backend:
     build: ./my-app
+    image: deploy-back-backend
     ports: ["3001:3000"]
   frontend:
     build: ./react-app
+    image: deploy-back-frontend
     ports: ["3000:80"]
