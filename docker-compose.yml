@@ -2,7 +2,9 @@ version: '3'
 services:
   backend:
     build: ./my-app
+    image: lemahkuat96/backend:latest
     ports: ["3001:3000"]
   frontend:
     build: ./react-app
+    image: lemahkuat96/frontend:latest
     ports: ["3000:80"]
