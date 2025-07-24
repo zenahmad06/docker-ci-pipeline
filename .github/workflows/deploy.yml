@@ -17,4 +17,4 @@
                docker pull lemahkuat96/frontend:latest 
                docker stop app || true 
                docker rm app || true 
-               docker run -d --name app -p 3000:80 lemahkuat96/frontend:latest
+               docker run -d --name app -p 3000:80 lemahkuat96/frontend:latest  
