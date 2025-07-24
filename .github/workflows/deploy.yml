@@ -1,12 +1,12 @@
  name: Deploy to Server 
-   on: 
-     push: 
-       branches: [ main ] 
+  on: 
+    push: 
+      branches: [ main ] 
  
-   jobs: 
-     deploy: 
-       runs-on: ubuntu-latest 
-       steps: 
+  jobs: 
+    deploy: 
+      runs-on: ubuntu-latest 
+        steps: 
          - name: Deploy over SSH 
            uses: appleboy/ssh-action@v0.1.10 
            with: 
@@ -17,4 +17,4 @@
                docker pull lemahkuat96/frontend:latest 
                docker stop app || true 
                docker rm app || true 
-               docker run -d --name app -p 3000:80 lemahkuat96/frontend:latest  
+               docker run -d --name app -p 3000:80 lemahkuat96/frontend:latest     
