@@ -14,7 +14,7 @@
              username: ${{ secrets.SSH_USER }} 
              key: ${{ secrets.SSH_PRIVATE_KEY }} 
              script: | 
-               docker pull yourname/app:latest 
+               docker pull lemahkuat96/frontend:latest 
                docker stop app || true 
                docker rm app || true 
-               docker run -d --name app -p 80:80 yourname/app:latest
+               docker run -d --name app -p 3000:80 lemahkuat96/frontend:latest
